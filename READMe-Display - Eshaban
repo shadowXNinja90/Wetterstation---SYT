@@ -1,0 +1,38 @@
+# ESP32-C3 Wetterstation – OLED-Display
+
+Dieses Modul zeigt die erfassten Umweltdaten direkt auf einem kleinen OLED-Display an. Dadurch kann man sofort die aktuellen Werte wie Temperatur, Luftfeuchtigkeit und Lichtstärke ablesen – ganz ohne App oder Website.
+
+## Verwendete Komponenten
+
+- **SSD1306 OLED-Display** (128x64 Pixel)
+- **ESP32-C3 Mikrocontroller**
+- **DHT11 Sensor**
+- **LDR Modul**
+
+## Anschlüsse
+
+Das OLED-Display wird über **I2C** angeschlossen:
+- `SDA` → GPIO 4 (z. B.)
+- `SCL` → GPIO 5 (z. B.)
+- GND & VCC wie üblich
+
+## Was wird angezeigt?
+
+- Temperatur in °C
+- Luftfeuchtigkeit in %
+- Lichtintensität als grober Wert
+- Optional: Statusanzeige (z. B. WLAN verbunden)
+
+## Vorteile
+
+- Keine zusätzliche Software notwendig
+- Funktioniert auch offline
+- Ideal für schnellen Überblick direkt am Gerät
+
+## Libraries (Arduino)
+
+- `Adafruit_SSD1306`
+- `Adafruit_GFX`
+- `Wire.h`
+- `DHT.h`
+
