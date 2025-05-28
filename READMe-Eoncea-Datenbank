@@ -1,0 +1,32 @@
+# ESP32-C3 Wetterstation – Datenbank
+
+Dieses Modul speichert die Umweltdaten (Temperatur, Luftfeuchtigkeit, Licht) der Wetterstation automatisch in einer Datenbank. Die Daten können später über einen Webserver oder ein Frontend visualisiert und analysiert werden.
+
+## Verwendete Komponenten
+
+- **ESP32-C3 Mikrocontroller**
+- **DHT11 Sensor** (Temperatur & Luftfeuchtigkeit)
+- **LDR Fotowiderstand** (Lichtstärke)
+- **WiFiManager** Bibliothek für WLAN-Verbindung
+- **Datenbank**: z. B. MySQL oder SQLite auf einem Server oder lokal
+
+## Funktionsweise
+
+1. Die Sensoren messen in regelmäßigen Abständen die Umweltdaten.
+2. Der ESP32-C3 verbindet sich über WLAN mit dem Netzwerk.
+3. Die Messwerte werden über HTTP oder MQTT an einen Server gesendet.
+4. Der Server speichert die Daten in einer Datenbank.
+
+## Beispielhafte Datenstruktur
+
+| Zeitstempel         | Temperatur (°C) | Luftfeuchtigkeit (%) | Lichtintensität |
+|---------------------|-----------------|-----------------------|-----------------|
+| 2025-05-27 14:01:00 | 22.3            | 45.7                  | 680             |
+
+## Vorteile
+
+- Datenzugriff über Web oder App
+- Langzeitbeobachtung von Wettertrends
+- Einfache Erweiterung durch weitere Sensoren
+
+
